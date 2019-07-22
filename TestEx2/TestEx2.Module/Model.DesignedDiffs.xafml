@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="TestEx2">
+  <ActionDesign>
+    <Actions>
+      <Action Id="gnrt" ImageName="NewTableStyle" Caption="Сгенерировать" />
+    </Actions>
+    <ActionToContainerMapping>
+      <ActionContainer Id="Tools">
+        <ActionLink ActionId="gnrt" IsNewNode="True" Removed="True" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="TestEx2.Module.BusinessObjects.Airport" ImageName="Travel_Hotel" />
+    <Class Name="TestEx2.Module.BusinessObjects.Pilot" ImageName="Business_Businessman" />
+    <Class Name="TestEx2.Module.BusinessObjects.Plane" ImageName="Travel_Plane" />
+  </BOModel>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="19.1.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="Airport_ListView" ShowAutoFilterRow="True" ShowFindPanel="True" DataAccessMode="Server" />
+    <ListView Id="Airport_LookupListView" ShowFindPanel="False" ShowAutoFilterRow="False" />
+    <ListView Id="Pilot_ListView" ShowAutoFilterRow="True" ShowFindPanel="True" DataAccessMode="Server" />
+    <ListView Id="Pilot_LookupListView" ShowFindPanel="False" ShowAutoFilterRow="False" />
+    <ListView Id="Plane_ListView" ShowAutoFilterRow="True" ShowFindPanel="True" DataAccessMode="Server" />
+    <ListView Id="Plane_LookupListView" ShowFindPanel="False" ShowAutoFilterRow="False" />
+  </Views>
+</Application>

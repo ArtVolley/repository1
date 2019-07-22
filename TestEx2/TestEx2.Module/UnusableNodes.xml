@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="eaf5cddd-d81d-4e7f-9ec1-09012386f019" Caption="Отчет &quot;Список пилотов&quot;" />
+    </Actions>
+  </ActionDesign>
+</Application>

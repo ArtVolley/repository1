@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views>
+    <DetailView Id="AboutInfo_DetailView">
+      <Items>
+        <StaticText Id="AboutText" Text="AirportApp&lt;br&gt;Версия  1.0.7137" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Pilot_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="XPObject">
+              <LayoutGroup Id="Auto06c0ad0e-42c2-4bab-9e74-14579a89d4f8">
+                <LayoutGroup Id="OwnPlane" Caption="Прикрепленные самолеты" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto28a50e48-471a-4837-af8b-34b0ad18fa5b">
+                <LayoutGroup Id="AllowedPlanes" Caption="Разрешенные самолеты" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Plane_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="XPObject">
+              <LayoutGroup Id="WhoCanUse" Caption="Кто может летать на данном самолете" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="RuleSetValidationResult_ByTarget_Error_DetailView">
+      <Items>
+        <StaticText Id="ValidationResultsText" Text="При контроле данных обнаружены проблемы. Информация об ошибках и способах их устранения приведена ниже." />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

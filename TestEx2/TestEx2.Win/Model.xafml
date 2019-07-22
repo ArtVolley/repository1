@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="BO_Skull" Title="AirportApp">
+  <BOModel>
+    <Class Name="TestEx2.Module.BusinessObjects.Airport" Caption="Аэропорт" />
+    <Class Name="TestEx2.Module.BusinessObjects.Pilot" Caption="Пилот" />
+    <Class Name="TestEx2.Module.BusinessObjects.Plane" Caption="Самолет" />
+  </BOModel>
+  <NavigationItems NavigationStyle="Accordion" ShowImages="False" DefaultChildItemsDisplayStyle="List" />
+  <Options UIType="TabbedMDI" FormStyle="Ribbon" ShowTabImage="True" Skin="Metropolis Dark" RestoreTabbedMdiLayout="True">
+    <LayoutManagerOptions EnableLayoutGroupImages="False" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="19.1.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="19.1.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Airport_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Airport" RelativeSize="13.258426966292134" Caption="Airport">
+              <LayoutItem Id="NameOfAirport" RelativeSize="54.237288135593218" />
+              <LayoutGroup Id="Autodc69a039-11e2-415e-8aaa-fad0ee989dd6" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="45.762711864406782" IsNewNode="True">
+                <LayoutItem Id="QtyPilots" ViewItem="QtyPilots" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="QtyPlanes" ViewItem="QtyPlanes" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="QtyPilots" RelativeSize="28.91566265060241" Removed="True" />
+              <LayoutItem Id="QtyPlanes" RelativeSize="32.53012048192771" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" Direction="Horizontal" RelativeSize="86.741573033707866">
+              <LayoutGroup Id="Pilots" ShowCaption="True" TextAlignMode="AlignWithChildren" Index="0" RelativeSize="50" IsNewNode="True">
+                <LayoutItem Id="Pilots" TextAlignMode="AutoSize" ViewItem="Pilots" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Planes" ShowCaption="True" TextAlignMode="AlignWithChildren" Index="1" RelativeSize="50" IsNewNode="True">
+                <LayoutItem Id="Planes" TextAlignMode="AutoSize" ViewItem="Planes" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="50.133333333333333" Removed="True">
+            <LayoutGroup Id="Planes" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="0" Removed="True">
+              <LayoutItem Id="Planes" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Pilots" TextAlignMode="AlignWithChildren" RelativeSize="100" Removed="True">
+              <LayoutItem Id="Pilots" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Airport_ListView" DataAccessMode="Server" ShowAutoFilterRow="True" ShowFindPanel="True" />
+    <ListView Id="Airport_LookupListView" DataAccessMode="Client" />
+    <ListView Id="Airport_Pilots_ListView" DataAccessMode="Client" />
+    <ListView Id="Airport_Planes_ListView" DataAccessMode="Client" />
+    <ListView Id="Pilot_AllowedPlanes_ListView" DataAccessMode="Client" />
+    <DetailView Id="Pilot_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Pilot" RelativeSize="15.284974093264248">
+              <LayoutItem Id="Name" RelativeSize="54.237288135593218" />
+              <LayoutItem Id="Airport" RelativeSize="45.762711864406782" />
+              <LayoutItem Id="QtyPlanes" RelativeSize="32.53012048192771" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="84.715025906735747" Direction="Horizontal" Caption="Oid">
+              <LayoutGroup Id="Auto06c0ad0e-42c2-4bab-9e74-14579a89d4f8" ShowCaption="False" Caption="Auto06c0ad0e-42c2-4bab-9e74-14579a89d4f8(7)" Index="0" RelativeSize="50" IsNewNode="True">
+                <LayoutItem Id="QtyPlanes" ViewItem="QtyPlanes" Index="0" RelativeSize="9.1743119266055047" IsNewNode="True" />
+                <LayoutGroup Id="OwnPlane" ShowCaption="True" Caption="Own Plane" TextAlignMode="AlignWithChildren" Index="1" RelativeSize="90.8256880733945" IsNewNode="True">
+                  <LayoutItem Id="OwnPlane" TextAlignMode="AutoSize" ViewItem="OwnPlane" Index="0" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Auto28a50e48-471a-4837-af8b-34b0ad18fa5b" ShowCaption="False" Caption="Auto28a50e48-471a-4837-af8b-34b0ad18fa5b(11)" Index="1" RelativeSize="50" IsNewNode="True">
+                <LayoutItem Id="Item1" Index="0" RelativeSize="8.8685015290519882" IsNewNode="True" />
+                <LayoutGroup Id="AllowedPlanes" ShowCaption="True" Caption="Allowed Planes" TextAlignMode="AlignWithChildren" Index="1" RelativeSize="91.131498470948017" IsNewNode="True">
+                  <LayoutItem Id="AllowedPlanes" TextAlignMode="AutoSize" ViewItem="AllowedPlanes" Index="0" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutItem Id="Oid" RelativeSize="50" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="84.533333333333331" Removed="True">
+            <LayoutGroup Id="AllowedPlanes" TextAlignMode="AlignWithChildren" Index="0" RelativeSize="100" Removed="True">
+              <LayoutItem Id="AllowedPlanes" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="OwnPlane" Removed="True" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Pilot_ListView" DataAccessMode="Server" ShowAutoFilterRow="True" ShowFindPanel="True" />
+    <ListView Id="Pilot_LookupListView" DataAccessMode="Client" ShowAutoFilterRow="False" ShowFindPanel="False" />
+    <ListView Id="Pilot_OwnPlane_ListView" DataAccessMode="Client" ShowAutoFilterRow="False" ShowFindPanel="False" />
+    <DetailView Id="Plane_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Plane" RelativeSize="13.932584269662922">
+              <LayoutItem Id="NameOfPlane" RelativeSize="51.612903225806448" />
+              <LayoutItem Id="Airport" RelativeSize="48.387096774193552" />
+            </LayoutGroup>
+            <LayoutGroup Id="Pilot" ShowCaption="True" TextAlignMode="AlignWithChildren" Index="1" RelativeSize="27.191011235955056" IsNewNode="True">
+              <LayoutItem Id="Pilot" TextAlignMode="AutoSize" ViewItem="Pilot" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="58.876404494382022" Caption="Oid" Direction="Vertical" Index="2">
+              <LayoutGroup Id="WhoCanUse" ShowCaption="True" Caption="Who Can Use" TextAlignMode="AlignWithChildren" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="WhoCanUse" TextAlignMode="AutoSize" ViewItem="WhoCanUse" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="Oid" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="87.733333333333334" Removed="True">
+            <LayoutGroup Id="Pilot" TextAlignMode="AlignWithChildren" RelativeSize="100" Removed="True">
+              <LayoutItem Id="Pilot" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="WhoCanUse" Removed="True" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Plane_ListView" DataAccessMode="Server" ShowAutoFilterRow="True" ShowFindPanel="True" />
+    <ListView Id="Plane_LookupListView" DataAccessMode="Client" ShowAutoFilterRow="False" ShowFindPanel="False" />
+    <ListView Id="Plane_Pilot_ListView" DataAccessMode="Client" ShowFindPanel="False" ShowAutoFilterRow="False" />
+    <ListView Id="Plane_WhoCanUse_ListView" DataAccessMode="Client" ShowFindPanel="True" ShowAutoFilterRow="True" />
+  </Views>
+</Application>
